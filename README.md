@@ -1,4 +1,4 @@
-# Como configurar/instalar/usar o `setoolkit` no `Kali Linux`
+# Como configurar/instalar/usar o `setoolkit` no `Linux Ubuntu`
 
 ## Resumo
 
@@ -16,7 +16,7 @@ O `"setoolkit"` (Social Engineering Toolkit) é uma poderosa ferramenta de códi
 
 ## 1. Como configurar/instalar/usar o `setoolkit` no `Linux Ubuntu` [1][3]
 
-Para configurar/instalar o `setoolkit` no `Linux Ubuntu`, você pode seguir estes passos:
+Para configurar/instalar/usar o `setoolkit` no `Linux Ubuntu`, você pode seguir estes passos:
 
 1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
 
@@ -39,23 +39,23 @@ Para configurar/instalar o `setoolkit` no `Linux Ubuntu`, você pode seguir este
     2.8 Realmente atualizar os pacotes instalados para as suas versões mais recentes, com base na última vez que você executou `sudo apt update`. Digite o seguinte comando e pressione `Enter`: `sudo apt full-upgrade -y`
     
 
-3. Instalar Dependências: O setoolkit requer algumas dependências. Instale-as com o seguinte comando: `sudo apt install -y git apache2 python3-pip`
+3. Instalar Dependências: O `setoolkit` requer algumas dependências. Instale-as com o seguinte comando: `sudo apt install -y git apache2 python3-pip`
 
-4. **Permissões de Superusuário:** A maioria das operações de instalação requer privilégios de superusuário (root). Você pode usar o comando sudo antes dos comandos para adquirir essas permissões. Por exemplo:
+4. **Permissões de Superusuário:** A maioria das operações de instalação requer privilégios de superusuário (`root`). Você pode usar o comando sudo antes dos comandos para adquirir essas permissões. Por exemplo:
 
     ```
-    sudo git clone https://github.com/trustedsec/social-engineer-toolkit/ setoolkit/
+    sudo git clone https://github.com/trustedsec/social-engineer-toolkit.git
     sudo pip3 install -r requirements.txt
     sudo python3 setup.py
     ```
 
     Certifique-se de fornecer sua senha de superusuário quando solicitado.
 
-5. **Instalar Pacotes Python Locais:** Se você encontrar problemas com a instalação de pacotes Python (como `pycrypto`) devido à falta de permissões, você pode usar a opção --`user` para instalar pacotes localmente apenas para o seu usuário, sem a necessidade de permissões de superusuário. Por exemplo: `pip3 install --user -r requirements.txt`
+5. **Instalar Pacotes `Python` Locais:** Se você encontrar problemas com a instalação de pacotes `Python` (como `pycrypto`) devido à falta de permissões, você pode usar a opção --`user` para instalar pacotes localmente apenas para o seu usuário, sem a necessidade de permissões de superusuário. Por exemplo: `pip3 install --user -r requirements.txt`
 `
     Isso instalará os pacotes Python na sua pasta pessoal e não exigirá permissões de superusuário.
 
-6. **Executar o SET:** Para iniciar o SET, use: `sudo setoolkit
+6. **Executar o SET:** Para iniciar o SET, use: `sudo setoolkit`
 `
 Lembre-se de que o SET é uma ferramenta poderosa usada para testes de engenharia social e pentesting. Use-a com responsabilidade e apenas em ambientes autorizados.
 
@@ -65,14 +65,14 @@ Lembre-se de que, em alguns casos, pode ser necessário reiniciar o terminal ou 
 
 ### 2. Código completo para configurar/instalar/usar
 
-Para configurar/instalar o `setoolkit` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
+Para configurar/instalar/usar o `setoolkit` no `Linux Ubuntu` sem precisar digitar linha por linha, você pode seguir estas etapas:
 
 1. Abra o `Terminal Emulator`. Você pode fazer isso pressionando: `Ctrl + Alt + T`
 
 2. Digite o seguinte comando e pressione `Enter`:
 
     ```
-    sudo apt clean                                                            
+    sudo apt clean
     sudo apt autoclean
     sudo apt autoremove -y
     sudo apt update
@@ -80,7 +80,7 @@ Para configurar/instalar o `setoolkit` no `Linux Ubuntu` sem precisar digitar li
     sudo apt clean
     sudo apt list --upgradable
     sudo apt full-upgrade -y
-    sudo git clone https://github.com/trustedsec/social-engineer-toolkit/ setoolkit/
+    sudo git clone https://github.com/trustedsec/social-engineer-toolkit.git
     sudo pip3 install -r requirements.txt
     sudo python3 setup.py
     pip3 install --user -r requirements.txt
